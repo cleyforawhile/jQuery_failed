@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #5f27cd; /* --- */
+    padding: 16px 0;       /*Espaçamento e separação tanto para cima e baixo 16px e para os lados 0*/          
+    color: #fff;         /* cor das letras */
+    display: flex;               /* Nós vamos deixar o botão do lado ao invés de embaixo */
+    border-bottom: 16px solid #341f97;  /* Vai criar uma separação, sólida, traçada, pode escolher 
+    uma cor para ficar mais agradável */
+    justify-content: center;      /* justify-content center deixa tudo de forma centralizada */
+    text-transform: uppercase; /*mexe no texto*/
+    font-style: italic;  /*mexe no texto também*/
+}
+
+header button {  /*Aqui foi chamado somente o butão*/
+    margin-left: 16px;  /*Aqui foi separado o botão mais para a LEFT */
+}
+
+form{
+    background-color: #c8d6e5; /*escolhi uma cor para a camada form*/
+    padding: 24px 0; /* escolhi um espaçamento de 24px para cima e baixo e 0 nas laterais*/
+    text-align: center; /*Alinhamento de texto, no caso aqui foi pro centro (center)*/
+    display: none; /*pra ficar sem nada*/
+}
+
+form h2{ /*Para modificar somente aqui*/
+    margin-bottom: 16px; /*Criamos um espaçamento do botão*/
+
+}
+
+input,
+button{  /*Dessa forma conseguimos colocar o mesmo atributo nos dois*/
+    padding: 8px;
+}
+
+button{
+    background-color: #009432; /*Aqui nós colocamos a cor no botão. basta chamar o atributo button*/
+    border: none; /*tira a borda*/
+    font-weight: bold; /*font-weight mexe no texto e o bold deixa em negrito*/
+    text-transform: uppercase; /*text-transform transforma o texto e o uupercase deixa em MAIUSC */
+    color: #fff; /*Muda a cor dos botão*/
+    cursor: pointer; /* essa opção irá aparecer um ponto assim que vc aproximar do botão com mouse */
+}
+
+#botao-cancelar{ /*Com ID chamamos com #, do contrário da Classe e para modificarmos
+    fazemos dessa forma aí que eu fiz, para modificarmos.*/
+
+    background-color: red;
+
+    /* Importante: background-color pinta a estrutura
+    e o color as letras, é nós! */
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li {
+    max-width: 25%;
+    list-style: none;
+    position: relative;
+    max-height: 280px;
+    overflow-y: hidden;
+}
+
+ul li img {
+    width: 100%;
+}
+
+.overlay-imagem-link {
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all ease .5s;
+    
+}
+
+.overlay-imagem-link a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li:hover .overlay-imagem-link {
+    opacity: 1;
+}
